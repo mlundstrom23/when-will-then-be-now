@@ -4,7 +4,7 @@ const allLogs = require('./logs.js')
 const filterLogs = require('../logFilter')
 
 describe('filterLogs', () => {
-  it('retuns the logs for the environment and date provided', () => {
+  it('returns the logs for the environment and date provided', () => {
     const expectedLogs = [
       { environment: 'qa', timestamp: 1553796277000, message: 'Error: could not find property `price` of undefined' },
       { environment: 'qa', timestamp: 1553810677000, message: 'Error: array index out of range' },
@@ -14,7 +14,7 @@ describe('filterLogs', () => {
     expect(returnedLogs).to.deep.equal(expectedLogs)
   })
 
-  it('retuns all logs for the environment when no time period is provided', () => {
+  it('returns all logs for the environment when no time period is provided', () => {
     const expectedLogs = [
       { environment: 'production', timestamp: 1553807783000, message: 'Error: failed login threshold reached, account locked' },
       { environment: 'production', timestamp: 1553816777000, message: 'Error: invalid product ID: 1h4x0rU' },
